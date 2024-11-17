@@ -1,8 +1,8 @@
-# Delete the book instance
+# Delete Operation for Book
 
-book_to_delete = Book.objects.get(title="Nineteen Eighty-Four")
-book_to_delete.delete()
+To delete a book from the database, use the following command:
 
-## Output (this command will return a tuple, so we can check it)
-
-book_to_delete
+```python
+from bookshelf.models import Book
+book = Book.objects.get(title="1984")  # Retrieve the book instance
+book.delete()  # Delete the book instance
